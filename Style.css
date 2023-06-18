@@ -1,0 +1,840 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  position:absolute;
+  text-align: center;
+  width: 100%;
+  padding: 3px;
+  height: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
+  background-color: #000000c7;
+  z-index: 1000;
+}
+
+.main {
+  max-width: auto;
+  background-size: cover;
+  height: 96.5vh;
+}
+
+#image_Home {
+  background-image: url("Images/Homepage.jpg");
+}
+
+#image1_Info {
+  background-image: url("Images/Information.jpg");
+}
+
+#image2_World {
+  background-image: url("Images/ButterflyWorld.webp");
+}
+
+#image3_List {
+  background-image: url("Images/ButterflyList.jpg");
+}
+
+#image4_Sighting {
+  background-image: url("Images/ButterflySighting.jpg");
+}
+
+#image5_Resource {
+  background-image: url("Images/Resources.jpg");
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* HomePage Styles COntent */
+
+.menu {
+  width: auto;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+ul li {
+  margin-inline: 15px;
+  font-weight: 800;
+  font-size: 18px;
+  font-family: Arial;
+  margin-block: auto;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ffffffc7;
+  font-family: sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+ul li a:hover {
+  color: #f80000;
+}
+
+.content {
+  width: 1200px;
+  height: auto;
+  margin: 50px;
+  color: #191919;
+  position: relative;
+}
+
+.content .par {
+  padding-left: 21px;
+  font-family: Arial;
+  font-weight: bolder;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+
+.content h1 {
+  font-family: 'Times New Roman';
+  font-size: 50px;
+  padding-left: 20px;
+  margin-top: 10%;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.content span {
+  color: #ff2800;
+  font-size: 68px
+}
+
+.navbar {
+  background-color: #0000007e;
+}
+
+.par {
+  color: #000000;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Information Page Styles Content */
+
+:root {
+  --surface-color: #ffffffd9;
+  --curve: 45;
+}
+
+.Info {
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  margin: 4rem 4vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {
+  width: 100%;
+  height: 520px;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+  height: 460px;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.6em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+  justify-content: center;
+  height: 100px;
+
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__title {
+  font-size: 30px;
+  margin: 0 0 .3em;
+  color: #000000;
+  font-family: system-ui;
+  text-align: center;
+}
+
+.card__description {
+  padding: 0.2em 1em 1em;
+  margin: 0;
+  text-align: center;
+  color: #0000009e;
+  font-family: system-ui;
+  display: block;
+  overflow: hidden;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Butterfly of the World */
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 50%;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.column {
+  float: left;
+  width: 46%;
+  height: 92.5vh;
+  background-color: #ebebeb;
+}
+
+.column1 {
+  float: right;
+  width: 54%;
+  height: 92.5vh;
+}
+
+#BGCol {
+  background-image: url("Images/ButterflyWorld.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Play button Animation */
+
+.video-play-button {
+  position: absolute;
+  z-index: 10;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 32px;
+  height: 44px;
+  border-radius: 60%;
+  padding: 18px 20px 18px 28px;
+}
+
+.video-play-button:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: -29%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(#0dfc00, #ffffff);
+  border-radius: 50%;
+  animation: pulse-border 1800ms ease-out infinite;
+}
+
+.video-play-button:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -29%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 85px;
+  height: 85px;
+  background: linear-gradient(#ffffff, #0dfc00);
+  border-radius: 50%;
+  transition: all 400ms;
+}
+
+.video-play-button span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 19px solid #ffffff;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  top: 10px;
+  left: -57.5px;
+}
+
+.row .column1 #p1 {
+  color: #f7f7f7;
+  position: absolute;
+  margin-top: 63.3vh;
+  margin-left: 10vh;
+  font-size: 35px;
+}
+
+.row .column1 #p2 {
+  color: #f7f7f7;
+  position: absolute;
+  margin-top: 69vh;
+  margin-left: 10.5vh;
+  font-size: 25px;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.row .column {
+  padding-top: 90px;
+  padding-left: 30px;
+}
+
+.row .column p {
+  color: #000000;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-right: 80px;
+}
+
+.row .column h1 {
+  color: #ff0000;
+  font-size: 70px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+/* Butterfly world list Page Style */
+
+.container {
+  position: relative;
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 6px;
+}
+
+.container .box:hover {
+  z-index: 1;
+  transform: scale(1.25);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, .5);
+}
+
+.container .box .imgBox {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .box .imgBox:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, hwb(0 13% 84% / 0.395), #000000b3);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .box .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 2s;
+}
+
+.container .box:hover .imgBox:before {
+  opacity: 1;
+}
+
+.container .box .content1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.container .box .content1 h1 {
+  font-family: sans-serif;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #fff;
+  transform: translateY(200px);
+}
+
+.container .box:hover .content1 h1 {
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.container .box .content1 p {
+  font-family: 'Courier New', Courier, monospace;
+  transition: 0.5s;
+  font-size: 14px;
+  color: #fff;
+  transform: translateY(200px);
+
+}
+
+.container .box:hover .content1 p {
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Butterfly Sigiting Page Styles Content */
+
+.Sighting {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.letter h1,
+p {
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+}
+
+.letter h1 {
+  font-size: 3rem;
+  font-family: 'Dancing Script';
+  padding-bottom: 20px;
+}
+
+textarea,
+input,
+button {
+  line-height: 1.5rem;
+  border: 0;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+  appearance: none;
+
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: 0;
+  background: #060b13df;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: #fffcfc;
+  font-family: 'Dancing Script';
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0403035f;
+
+}
+
+button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 10px;
+  background-color: #060b13df;
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  font-family: 'Dancing Script';
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+button:hover {
+  background: #04030376;
+  transition: background-color 0.2s;
+}
+
+textarea,
+input {
+  color: #ffffff;
+  background-color: transparent;
+  font-size: large;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  font-size: medium;
+  opacity: 80%;
+  color: rgb(0, 0, 0);
+}
+
+textarea {
+  width: 90%;
+  height: 10rem;
+  resize: none;
+}
+
+input {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(78, 94, 114, 0.3)' x='0' y='23' width='10' height='1'/></svg>");
+  outline: none;
+}
+
+.wrapper {
+  width: 50rem;
+  background-color: rgba(249, 241, 241, 0);
+}
+
+.letter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50rem;
+  perspective: 60rem;
+}
+
+.side1 {
+  height: 16rem;
+  background-color: #2b262683;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.side2 {
+  height: 16rem;
+  background-color: #2b262683;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.centered1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 3rem auto;
+}
+
+.popup {
+  width: 250px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: 260px;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img,
+h2 {
+  object-fit: fill;
+  width: 120px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 2);
+}
+
+.popup p {
+
+  font-size: 30px;
+  font-weight: 500;
+  margin: 15px 0 15px;
+  color: rgb(0, 0, 0);
+  font-family: 'Dancing Script';
+  font-weight: 800;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* Endangered butterfly Page Styles Content */
+
+:root {
+  --Playfair: 'Playfair Display', serif;
+  --Roboto: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container1 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* header */
+.Home {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(Images/ENDanger.jpg) center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.banner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #130f0fc5;
+}
+
+.banner-title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 100px;
+}
+
+.banner-title span {
+  color: #ff0000c9;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: var(--Roboto);
+  font-weight: 500px;
+  text-align: justify;
+  padding: 10px;
+}
+
+/* blog */
+.blog {
+  background: #ffffff;
+  padding: 4.5rem 0;
+}
+
+.blog-content {
+  margin: 2rem 0;
+}
+
+.blog-img {
+  position: relative;
+}
+
+.blog-img span {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.blog-text {
+  margin: 2.2rem 0;
+  padding: 0 1rem;
+}
+
+.blog-text h4 {
+  font-family: var(--Playfair);
+  padding: 1rem 0;
+  font-size: 1.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ff0000;
+}
+
+.blog-text h5 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  padding-bottom: 1.2rem;
+  font-family: var(--Roboto);
+  text-align: center;
+}
+
+/* Media Queries */
+@media screen and (min-width: 540px) {
+
+
+  .banner-title {
+      font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blog-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .blog-content {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .design-content {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Resource Page Styles Content */
+
+table {
+  margin: 30px;
+  border-collapse: collapse;
+  width: 96%;
+}
+
+th,
+td,
+tr {
+  border: 0px solid rgba(0, 0, 0, 0.693);
+  padding: 8px;
+  text-align: center;
+  background-color: #0000003f;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.701);
+}
+
+th {
+  background-color: #fefefea9;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.URL a {
+  color: rgba(255, 255, 255, 0.701);
+  text-decoration: underline;
+}
+
+.URL a:hover {
+  color: rgb(0, 179, 255);
+}
